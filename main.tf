@@ -168,7 +168,7 @@ EOF
 data "archive_file" "convert_py_to_zip" {
   type        = "zip"
   source_dir  = "${path.module}/package/"
-  output_path = "${path.module}/aws-stop-start-resources.zip"
+  output_path = "/tmp/${var.name}-aws-stop-start-resources.zip"
 }
 
 # Create Lambda function for stop or start aws resources
